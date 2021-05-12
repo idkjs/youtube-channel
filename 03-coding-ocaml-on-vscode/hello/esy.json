@@ -6,11 +6,12 @@
   },
   "scripts": {
     "watch": "esy b dune build @run_hello_bc -w",
+    "watch-js": "esy b dune build @run_hello_js -w",
     "start": "esy b dune exec ./Hello.exe"
   },
   "dependencies": {
-    "@opam/dune": "2.7.1",
-    "ocaml": "4.10.x"
+    "ocaml": "4.12.x",
+    "melange": "melange-re/melange"
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",

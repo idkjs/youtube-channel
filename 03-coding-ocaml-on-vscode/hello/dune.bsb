@@ -1,0 +1,24 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir .
+(rule
+(targets  Hello.ast)
+ (deps (:inputs  Hello.ml) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Hello.cmj Hello.cmi Hello.cmt Hello.bs.js)
+ (deps (:inputs  Hello.ast)  (:ast_deps Hello.ast ) bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/youtube-channel/03-coding-ocaml-on-vscode/hello -cwd . %{ast_deps}) (run bsc -I .    -w a -bs-package-name melange-prolog-webpage -bs-package-output commonjs:.:.bs.js -o Hello.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Hello.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir .melange.eobjs)
+
+(data_only_dirs node_modules .melange.eobjs)
+(alias (name bsb_world))
+;;;;BSB GENERATED: NO EDIT}

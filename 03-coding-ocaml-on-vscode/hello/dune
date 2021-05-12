@@ -13,3 +13,13 @@
  (deps Hello.exe)
  (action
   (run ./Hello.exe)))
+
+(rule
+ (alias run_hello_js)
+ (deps Hello.bs.js)
+ (action
+  (run node ./Hello.bs.js)))
+
+;;;;{BSB GENERATED: NO EDIT
+(include dune.bsb)
+;;;;BSB GENERATED: NO EDIT}
