@@ -1,0 +1,13 @@
+open Opium;
+
+type message = {
+  user_name: string,
+  body: string,
+};
+
+// let messages = ref([]);
+
+let read_all_messages =
+  App.get("/messages", _ => Lwt.return(Response.of_plain_text("x")));
+
+let () = App.empty|> read_all_messages |> App.run_multicore;

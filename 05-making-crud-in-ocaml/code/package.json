@@ -1,5 +1,9 @@
 {
   "name": "making-a-crud-in-ocaml",
+  "scripts": {
+    "watch": "esy b dune build -w",
+    "start": "esy b dune exec ./crud.exe"
+  },
   "dependencies": {
     "ocaml": "4.12.x",
     "@opam/dune": "*",
@@ -9,6 +13,7 @@
   },
   "devDependencies": {
     "@opam/ocaml-lsp-server": "*",
-    "@opam/ocamlformat": "*"
+    "@opam/ocamlformat": "*",
+    "@opam/reason": "*"
   }
 }
