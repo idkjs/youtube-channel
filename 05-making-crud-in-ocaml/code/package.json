@@ -1,7 +1,7 @@
 {
   "name": "making-a-crud-in-ocaml",
   "scripts": {
-    "watch": "esy b dune build -w",
+    "watch": "esy b dune build @all -w",
     "start": "esy b dune exec ./crud.exe"
   },
   "dependencies": {

@@ -1,4 +1,12 @@
 (executable
  (name crud)
- (libraries opium)
+ (modules crud)
+ (libraries opium storage)
  (preprocess (pps ppx_deriving_yojson)))
+(executable
+ (name crudV1)
+ (modules crudV1)
+ (libraries opium storageV1)
+ (preprocess (pps ppx_deriving_yojson)))
+
+

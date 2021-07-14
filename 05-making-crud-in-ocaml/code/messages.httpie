@@ -1,0 +1,3 @@
+http http://127.0.0.1:3000/messages
+//
+http --verbose POST http://localhost:3000/messages/ user_name=mando body=hello

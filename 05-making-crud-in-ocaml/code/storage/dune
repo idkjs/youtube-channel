@@ -1,0 +1,7 @@
+(library
+ (name storage)
+ (modules storage)
+ (libraries opium)
+ (preprocess (pps ppx_deriving_yojson)))
+
+
