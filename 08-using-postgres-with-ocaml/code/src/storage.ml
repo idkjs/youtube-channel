@@ -12,7 +12,8 @@ let ( let* ) = Lwt.bind
 
 (* setup of database pool *)
 
-let connection_url = "postgresql://postgres:password@localhost:5432"
+(* let connection_url = "postgresql://postgres:password@localhost:5432" *)
+let connection_url = "postgresql://admin_user:secret@localhost:5432/ocaml_messages_db"
 
 let pool =
   match Caqti_lwt.connect_pool ~max_size:10 (Uri.of_string connection_url) with
